@@ -1,0 +1,8 @@
+= nfe-ruby
+Implementação da Nota Fiscal Eletronica em ruby.
+
+Em desenvolvimento
+
+== Copyright
+
+Copyright (c) 2010 Vinicius Gati. See LICENSE for details.

@@ -1,0 +1,29 @@
+
+## MAC OS
+.DS_Store
+
+## TEXTMATE
+*.tmproj
+tmtags
+
+## EMACS
+*~
+\#*
+.\#*
+*_flymake\.*
+
+## VIM
+*.swp
+
+## PROJECT::GENERAL
+coverage
+rdoc
+pkg
+
+## IDEA IDE
+\.idea
+.idea
+
+## PROJECT::SPECIFIC
+*.pfx
+*.pem
