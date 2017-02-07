@@ -43,6 +43,9 @@ module NFe
     #Código de Regime Tributário.(Obrigatorio)
     nfe_attr :crt
 
+    #Código de Regime Tributário.(Obrigatorio)
+    nfe_attr :teste
+
     nfe_attr :endereco_emitente
 
     def endereco_emitente=(tEnderEmi)
