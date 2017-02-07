@@ -66,18 +66,18 @@ module NFe
 
     def attributes
       @attributes = {
-          'emit' => {
-              'CNPJ' => cnpj,
-              'CPF' => cpf,
-              'xNome' => nome,
-              'xFant' => nome_fantasia,
-              'enderEmit' => endereco_emitente.to_nfe_format,
-              'ie' => inscricao_estadual,
-              'iest' => inscricao_estadual,
-              'IM' => grupo_informacoes_interesse_prefeitura,
-              'CNAE' => cnae,
-              'CRT' => crt
-          }
+        'emit' => {
+          'CNPJ' => cnpj,
+          'CPF' => cpf,
+          'xNome' => nome,
+          'xFant' => nome_fantasia,
+          'enderEmit' => endereco_emitente.to_nfe_format,
+          'ie' => inscricao_estadual,
+          'iest' => inscricao_estadual,
+          'IM' => grupo_informacoes_interesse_prefeitura,
+          'CNAE' => cnae,
+          'CRT' => crt
+        }
       }
     end
 
