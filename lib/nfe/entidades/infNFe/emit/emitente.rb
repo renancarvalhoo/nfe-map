@@ -47,7 +47,7 @@ module NFe
     end
 
     def crt=(valor)
-      @crt = valor if NFe::EntidadeNFe::REGIMES_TRIBUTARIOS.include? valor
+      @crt = valor if NFe::Config::Params::REGIMES_TRIBUTARIOS.include? valor
     end
 
     def initialize
