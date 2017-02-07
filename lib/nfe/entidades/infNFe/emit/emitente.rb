@@ -10,9 +10,6 @@ module NFe
     # - Nome Fantasia
     nfe_attr :nome_fantasia
 
-    # - Nome
-    nfe_attr :nome
-
     # - CNPJ (obrigatorio ou CPF)
     nfe_attr :cnpj
 
@@ -43,9 +40,6 @@ module NFe
     #Código de Regime Tributário.(Obrigatorio)
     nfe_attr :crt
 
-    #Código de Regime Tributário.(Obrigatorio)
-    nfe_attr :teste
-
     nfe_attr :endereco_emitente
 
     def endereco_emitente=(tEnderEmi)
@@ -53,7 +47,7 @@ module NFe
     end
 
     def crt=(valor)
-      @crt = valor if REGIMES_TRIBUTARIOS.include? valor
+      @crt = valor if NFe::EntidadeNFe::REGIMES_TRIBUTARIOS.include? valor
     end
 
     def initialize
@@ -69,7 +63,7 @@ module NFe
         'emit' => {
           'CNPJ' => cnpj,
           'CPF' => cpf,
-          'xNome' => nome,
+          'xNome' => razao_social,
           'xFant' => nome_fantasia,
           'enderEmit' => endereco_emitente.to_nfe_format,
           'ie' => inscricao_estadual,
