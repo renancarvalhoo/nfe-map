@@ -2,7 +2,7 @@ require 'nfe/entidades/entidade_nfe'
 
 module NFe
 
-#elemento ide da NFe
+  #elemento ide da NFe
   class IdentificacaoNFe < NFe::EntidadeNFe
 
     #TCodIBGE
@@ -28,16 +28,15 @@ module NFe
     nfe_attr :nNF
 
     #Data de emissão do documento fiscal (AAAA-MM-DD)
-    nfe_attr :dEmi
+    nfe_attr :dhEmi
 
-    #Data de saida ou entrada da mercadoria / produto
-    nfe_attr :dSaiEnt
-
-    #Hora da saida ou da entrada da mercadoria / produto
-    nfe_attr :hSaiEnt
+    #Data de saida ou Hora da saida ou entrada da mercadoria / produto
+    nfe_attr :dhSaiEnt
 
     #Tipo do documento fiscal (0-entrada 1-saida)
     nfe_attr :tpNF
+
+    nfe_attr :idDest
 
     #Codigo do municipio do IBGE TCodMunIBGE
     nfe_attr :cMunFG
@@ -61,7 +60,7 @@ module NFe
 
     #TAmb
     #Identificacao do ambiente
-    nfe_attr :tAmb
+    nfe_attr :tpAmb
 
     #TFinNFe
     #Finalidade da emissao da NF-e
@@ -70,6 +69,9 @@ module NFe
     #3-ajuste
     nfe_attr :finNFe
 
+    nfe_attr :indFinal
+
+    nfe_attr :indPres
     #TProcEmi
     #Processo de emissao utilizado com a seguinte codificacao
     #0-com aplicativo do contribuinte

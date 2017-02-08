@@ -45,7 +45,7 @@ module NFe
     nfe_attr :endereco_emitente
 
     def endereco_emitente=(tEnderEmi)
-      @endereco_emitente = tEnderEmi if tEnderEmi.is_a? EnderecoEmitente
+      @endereco_emitente = tEnderEmi if tEnderEmi.is_a? Endereco
     end
 
     def crt=(valor)

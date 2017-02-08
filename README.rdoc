@@ -1,7 +1,5 @@
-= nfe-ruby
-Implementação da Nota Fiscal Eletronica em ruby.
-
-Em desenvolvimento
+= nfe-map
+Mapear os dados da nota fiscal eletrônica, versão 3.10
 
 == Copyright
 
