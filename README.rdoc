@@ -1,6 +1,11 @@
 = nfe-map
 Mapear os dados da nota fiscal eletrônica, versão 3.10
 
+- Precisa ser criado as validações com os xsds
+
+
+O objetivo futuro é criar e tratar as requisições com a receita federal.
+
 == Copyright
 
 Copyright (c) 2010 Vinicius Gati. See LICENSE for details.
