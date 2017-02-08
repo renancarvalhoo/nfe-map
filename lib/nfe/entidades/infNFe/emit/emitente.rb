@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 require 'nfe/entidades/entidade_nfe'
+require 'json'
 
 module NFe
 
   class Emitente < NFe::EntidadeNFe
+
     # - Nome/Razao Social (obrigatório)
     nfe_attr :razao_social
 
@@ -43,7 +45,7 @@ module NFe
     nfe_attr :endereco_emitente
 
     def endereco_emitente=(tEnderEmi)
-      @endereco_emitente = tEnderEmi if tEnderEmi.is_a? EnderecoEmitente.class
+      @endereco_emitente = tEnderEmi if tEnderEmi.is_a? EnderecoEmitente
     end
 
     def crt=(valor)

@@ -4,7 +4,7 @@ require 'json'
 
 module NFe
 
-  class EnderecoEmitente < NFe::EntidadeNFe
+  class EnderecoDestinatario < NFe::EntidadeNFe
 
     #  validates_length_of :xLgr, :nro, :xCpl, :xBairro, :xMun, :in => 2...60
     #  validates :CEP, :format => {:with => /[0-9]{8}/} #sem traços, somente numeros
