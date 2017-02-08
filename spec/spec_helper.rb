@@ -1,4 +1,11 @@
-$LOAD_PATH.unshift(File.dirname(__FILE__) + '../../lib')
-require 'rspec'
-require 'nfe-ruby'
-require 'nfe/service/web_service'
+require "bundler/setup"
+require "nfe/map"
+
+RSpec.configure do |config|
+  # Enable flags like --only-failures and --next-failure
+  config.example_status_persistence_file_path = ".rspec_status"
+
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
+end

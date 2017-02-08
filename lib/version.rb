@@ -1,3 +1,3 @@
-module NFeRuby
-	VERSION = '1.0.0'
+module NFeMap
+  VERSION = '0.0.1'
 end
