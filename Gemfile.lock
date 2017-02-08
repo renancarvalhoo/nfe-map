@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    nfe-map (0.1.0)
+    nfe-map (0.0.1)
       em-http-request
       nokogiri
       redis
