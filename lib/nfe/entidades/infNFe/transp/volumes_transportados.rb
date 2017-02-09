@@ -2,7 +2,7 @@ require 'nfe/entidades/entidade_nfe'
 
 module NFe
 
-#Dados dos volumes, representa o elemento vol do elemento transp da nfe
+  #Dados dos volumes, representa o elemento vol do elemento transp da nfe
   class VolumesTransportados < NFe::EntidadeNFe
 
     #qtd de volumes transportados

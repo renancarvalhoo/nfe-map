@@ -2,32 +2,31 @@ require 'nfe/entidades/entidade_nfe'
 
 module NFe
 
-  class Transportadora < NFe::EntidadeNFe
+  class Transportador < NFe::EntidadeNFe
 
     # - Nome/Razão Social (obrigatorio)
-    nfe_attr :razao_social
+    nfe_attr :cpf
 
-    # - Tipo de Documento (obrigatorio) - default CNPJ
-    nfe_attr :tipo_documento
+    nfe_attr :cnpj
 
     # - Numero do Documento (obrigatorio)
-    nfe_attr :numero_documento
+    nfe_attr :xNome
 
     # - Inscricao Estadual
-    nfe_attr :inscricao_estadual
+    nfe_attr :IE
 
     # Endereco
     # - Logradouro (obrigatorio)
-    nfe_attr :endereco_logradouro
+    nfe_attr :xEnder
 
     # - UF (obrigatorio)
-    nfe_attr :endereco_uf
+    nfe_attr :xMun
 
     # - Municipio (obrigatorio)
-    nfe_attr :endereco_municipio
+    nfe_attr :UF
 
     def to_s
-      "#{@tipo_documento} #{@numero_documento}"
+      @xNome
     end
 
   end

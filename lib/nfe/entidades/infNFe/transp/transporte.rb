@@ -4,12 +4,12 @@ require 'nfe/entidades/entidade_nfe'
 
 module NFe
 
-#elemento transp da nfe
+  #elemento transp da nfe
   class Transporte < NFe::EntidadeNFe
 
     nfe_attr :modFrete
 
-    nfe_attr :transportadora_simples
+    nfe_attr :transporta
 
     nfe_attr :retTransp
 
@@ -22,15 +22,17 @@ module NFe
     #ou balsa
     nfe_attr :balsa
 
+    nfe_attr :vol
+
     def attributes
       @attributes = {
-          'modFrete' => modFrete,
-          'transporta' => transportadora_simples.to_nfe_format,
-          'retTransp' => retTransp.to_nfe_format,
-          'veicTransp' => veicTransp,
-          'reboque' => reboque,
-          'vagao' => vagao,
-          'balsa' => balsa
+        'modFrete' => modFrete,
+        'transporta' => transportador.to_nfe_format,
+        'retTransp' => retTransp.to_nfe_format,
+        'veicTransp' => veicTransp,
+        'reboque' => reboque,
+        'vagao' => vagao,
+        'balsa' => balsa
       }
     end
 
