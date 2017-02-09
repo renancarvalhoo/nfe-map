@@ -2,7 +2,7 @@ require 'nfe/entidades/entidade_nfe'
 
 module NFe
 
-#elemento infAdic da nfe
+  #elemento infAdic da nfe
   class InformacaoAdicionalNFe < NFe::EntidadeNFe
 
     #Informações adicionais de interesse do Fisco (v2.0)
@@ -11,8 +11,7 @@ module NFe
     #Informações complementares de interesse do Contribuinte
     nfe_attr :infCpl #ate 5000 caracteres
 
-    #Campo de uso livre do contribuinte informar o nome
-    #do campo no atributo xCampo e o conteúdo no campo xTexto
+    #Campo de uso livre do contribuinte informar o nome do campo no atributo xCampo e o conteúdo no campo xTexto
     nfe_attr :obsCont
 
     #Campo de uso exclusivo do Fisco
@@ -25,13 +24,13 @@ module NFe
 
     def attributes
       {
-          :infAdic => {
-              :infAdFisco => infAdFisco,
-              :infCpl => infCpl,
-              :obsCont => obsCont.to_nfe_format,
-              :obsFisco => obsFisco.to_nfe_format,
-              :procRef => procRef.to_nfe_format
-          }
+        :infAdic => {
+          :infAdFisco => infAdFisco,
+          :infCpl => infCpl,
+          :obsCont => obsCont.to_nfe_format,
+          :obsFisco => obsFisco.to_nfe_format,
+          :procRef => procRef.to_nfe_format
+        }
       }
     end
 
