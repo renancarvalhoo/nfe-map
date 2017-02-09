@@ -5,9 +5,9 @@ module NFe
   class Transportador < NFe::EntidadeNFe
 
     # - Nome/Razão Social (obrigatorio)
-    nfe_attr :cpf
+    nfe_attr :CPF
 
-    nfe_attr :cnpj
+    nfe_attr :CNPJ
 
     # - Numero do Documento (obrigatorio)
     nfe_attr :xNome

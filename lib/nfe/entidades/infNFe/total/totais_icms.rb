@@ -1,8 +1,8 @@
-require "../entidade_nfe"
+require 'nfe/entidades/entidade_nfe'
 
 module NFe
 
-#totais referentes ao ICMS
+  #totais referentes ao ICMS
   class TotaisICMS < NFe::EntidadeNFe
 
     #BC do ICMS
@@ -10,6 +10,14 @@ module NFe
 
     #Valor total do ICMS
     nfe_attr :vICMS
+
+    nfe_attr :vICMSDeson
+
+    nfe_attr :vFCPUFDest
+
+    nfe_attr :vICMSUFDest
+
+    nfe_attr :vICMSUFRemet
 
     #BC do ICMS ST
     nfe_attr :vBCST
@@ -47,8 +55,12 @@ module NFe
     #valor total da NFe
     nfe_attr :vNF
 
+    nfe_attr :vTotTrib
+
     def attributes
-      {:ICMSTot => super}
+      instance_variables.map{|ivar| remove_instance_variable(ivar) if instance_variable_get(ivar).nil?}
+
+      instance_variables.map{|ivar| instance_variable_get ivar}
     end
 
   end
