@@ -7,7 +7,7 @@ Mapear os dados da nota fiscal eletrônica, versão 3.10
 - Criar as validações baseada  nos xsds
 - Ajustar os campos para os novos campos da versão 3.10
 - Criar testes
-- Refatorar o código para versão 3.10
+- Refatorar o código
 - Validações dos campos
 
 
