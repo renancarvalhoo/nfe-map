@@ -5,6 +5,8 @@ module NFe
   #totais referentes ao ICMS
   class TotaisICMS < NFe::EntidadeNFe
 
+
+
     #BC do ICMS
     nfe_attr :vBC
 
@@ -58,9 +60,11 @@ module NFe
     nfe_attr :vTotTrib
 
     def attributes
-      instance_variables.map{|ivar| remove_instance_variable(ivar) if instance_variable_get(ivar).nil?}
+      hash ||= {}
+      # instance_variables.map{|ivar| remove_instance_variable(ivar) if instance_variable_get(ivar).nil?}
+      instance_variables.map{|ivar|    hash[ivar.to_s.delete("@")] =  instance_variable_get(ivar) }
 
-      instance_variables.map{|ivar| instance_variable_get ivar}
+      hash
     end
 
   end

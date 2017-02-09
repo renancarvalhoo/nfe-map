@@ -1,5 +1,11 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
+require 'active_model'
+require 'active_support/core_ext/class'
+require 'active_support/core_ext/enumerable'
+require 'active_support/core_ext/object'
+require 'active_support/core_ext/string'
+
 require 'nfe/config/params'
 require 'nfe/entidades/entidade_nfe'
 require 'nfe/entidades/infNFe/nota_fiscal'
@@ -14,6 +20,8 @@ require 'nfe/entidades/infNFe/entrega/local_entrega'
 require 'nfe/entidades/infNFe/det/detalhes_nfe'
 require 'nfe/entidades/infNFe/total/total'
 require 'nfe/entidades/infNFe/total/totais_icms'
+require 'nfe/entidades/infNFe/total/totais_issqn'
+require 'nfe/entidades/infNFe/total/retencao_tributos_federais'
 require 'nfe/entidades/infNFe/transp/transporte'
 require 'nfe/entidades/infNFe/transp/transportador'
 require 'nfe/entidades/infNFe/transp/volumes_transportados'

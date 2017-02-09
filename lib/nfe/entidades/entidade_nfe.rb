@@ -8,7 +8,8 @@ require 'roxml'
 module NFe
 
   class EntidadeNFe
-    
+
+    include ActiveModel::Model
     include ROXML
 
     @@validations = []
@@ -39,6 +40,21 @@ module NFe
       doc = Nokogiri::XML::Document.new
       doc.root = to_xml
       doc.serialize
+    end
+
+    def attributes
+      hash ||= {}
+      # instance_variables.map{|ivar| remove_instance_variable(ivar) if instance_variable_get(ivar).nil?}
+      instance_variables.map{|ivar|    hash[ivar.to_s.delete("@")] =  instance_variable_get(ivar) }
+
+      hash
+    end
+
+    def assign_attributes(attributes)
+      attributes ||= {}
+      attributes.each do |name, value|
+        send("#{name}=", value)
+      end
     end
 
     # retorna o xml ou delega a classe herdada

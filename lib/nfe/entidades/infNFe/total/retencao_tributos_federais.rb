@@ -1,9 +1,7 @@
-require "../entidade_nfe"
-
 module NFe
 
-#Retenção de Tributos Federais
-#elemento retTrib do elemento total da NFe
+  #Retenção de Tributos Federais
+  #elemento retTrib do elemento total da NFe
   class RetencaoTributosFederais < NFe::EntidadeNFe
 
     nfe_attr :vRetPIS
